@@ -9,12 +9,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import by.epam.parking.entity.Parking;
 
-public class JsonConverter {
+public class JsonConvertService {
 	
 	private ObjectMapper mapper = new ObjectMapper();
 	
 	public String toJson(Parking parking) {
-		return mapper.writeValueAsString(parking);
+		String result = null;
+		try {
+			result = mapper.writeValueAsString(parking);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	public Parking fromJson(String jsonString) {
@@ -22,13 +28,10 @@ public class JsonConverter {
 		try {
 			parking = mapper.readValue(jsonString, Parking.class);
 		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return parking;

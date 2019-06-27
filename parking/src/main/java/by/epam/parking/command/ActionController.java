@@ -1,5 +1,6 @@
 package by.epam.parking.command;
 
+import by.epam.parking.command.impl.ParkCarAction;
 import by.epam.parking.command.impl.ViewParkStateAction;
 
 public class ActionController {
@@ -12,7 +13,7 @@ public class ActionController {
 			action = new ViewParkStateAction();
 			break;
 		case "2":
-			action = null;
+			action = new ParkCarAction();
 			break;
 		case "3":
 			action = null;

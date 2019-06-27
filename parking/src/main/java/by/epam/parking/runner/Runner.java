@@ -1,6 +1,6 @@
 package by.epam.parking.runner;
 
-import by.epam.parking.menu.ConsoleMenu;
+import by.epam.parking.view.ConsoleMenu;
 
 public class Runner {
 

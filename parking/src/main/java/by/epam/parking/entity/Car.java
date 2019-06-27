@@ -6,6 +6,10 @@ public class Car {
 	private String number;
 	private String owner;
 	
+	
+	public Car() {
+	}
+
 	public Car(String name, String number, String owner) {
 		super();
 		this.name = name;

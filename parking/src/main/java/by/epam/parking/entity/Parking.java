@@ -6,6 +6,10 @@ public class Parking {
 
 	private List<Slot> slots;
 
+	
+	public Parking() {
+	}
+
 	public Parking(List<Slot> slots) {
 		this.slots = slots;
 	}
@@ -47,5 +51,5 @@ public class Parking {
 	public String toString() {
 		return "Parking [slots=" + slots + "]";
 	}
-
+	
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class FileService {
 
-	private File file = new File("resources/parking.json");
+	private File file = new File("db/parking.json");
 
 	public String readFile() {
 		String jsonString = null;
