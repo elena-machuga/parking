@@ -6,7 +6,6 @@ public class Slot {
 	private boolean occupied;
 	private Car car;
 
-	
 	public Slot() {
 	}
 
@@ -41,11 +40,11 @@ public class Slot {
 		this.car = car;
 	}
 
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((car == null) ? 0 : car.hashCode());
 		result = prime * result + id;
 		result = prime * result + (occupied ? 1231 : 1237);
 		return result;
@@ -60,6 +59,11 @@ public class Slot {
 		if (getClass() != obj.getClass())
 			return false;
 		Slot other = (Slot) obj;
+		if (car == null) {
+			if (other.car != null)
+				return false;
+		} else if (!car.equals(other.car))
+			return false;
 		if (id != other.id)
 			return false;
 		if (occupied != other.occupied)
@@ -69,7 +73,7 @@ public class Slot {
 
 	@Override
 	public String toString() {
-		return "Slot [id=" + id + ", occupied=" + occupied + "]";
+		return "Slot [id=" + id + ", occupied=" + occupied + ", car=" + car + "]";
 	}
 
 }

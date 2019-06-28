@@ -28,5 +28,9 @@ public class ParkingManager {
 		}
 		return parking;
 	}
+	
+	public void saveParking(Parking parking) {
+		fs.writeFile(jc.toJson(parking));
+	}
 
 }

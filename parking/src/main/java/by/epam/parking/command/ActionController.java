@@ -1,6 +1,9 @@
 package by.epam.parking.command;
 
+import by.epam.parking.command.impl.DefaultAction;
+import by.epam.parking.command.impl.ExitAction;
 import by.epam.parking.command.impl.ParkCarAction;
+import by.epam.parking.command.impl.RemoveCarAction;
 import by.epam.parking.command.impl.ViewParkStateAction;
 
 public class ActionController {
@@ -16,16 +19,16 @@ public class ActionController {
 			action = new ParkCarAction();
 			break;
 		case "3":
-			action = null;
+			action = new RemoveCarAction();
 			break;
 		case "4":
-			action = null;
+			action = new ExitAction();
 			break;
 		default:
-			action = null;
+			action = new DefaultAction();
 			break;
 		}
-		
+
 		return action;
 
 	}

@@ -5,8 +5,7 @@ public class Car {
 	private String name;
 	private String number;
 	private String owner;
-	
-	
+
 	public Car() {
 	}
 
@@ -82,6 +81,5 @@ public class Car {
 	public String toString() {
 		return "Car [name=" + name + ", number=" + number + ", owner=" + owner + "]";
 	}
-	
-	
+
 }
