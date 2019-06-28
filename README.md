@@ -1,5 +1,4 @@
-# parking
-Parking app
+# Parking app
 
 Application that manages 10-slot parking.
 
